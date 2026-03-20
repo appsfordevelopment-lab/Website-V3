@@ -78,6 +78,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -379,7 +380,7 @@ h2.hero-headline {
   max-width: 600px;
   margin: 0 auto;
   font-family: var(--font-heading);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 48px;
 }
 
@@ -2356,11 +2357,41 @@ blockquote {
   }
 
   .hero-headline {
-    font-size: 48px;
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    line-height: 1.3;
+    padding: 0 var(--space-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-text-row {
+    padding: 0 var(--space-md);
+  }
+
+  .hero .hero-container {
+    padding: 0 var(--space-md);
+    overflow-x: hidden;
+  }
+
+  .hero {
+    overflow-x: hidden;
+  }
+
+  .problem,
+  .changing-section,
+  .intro-section {
+    overflow-x: hidden;
   }
 
   .problem-slide {
     min-height: 50vh;
+    padding: var(--space-md) var(--space-md);
+    max-width: 100%;
+  }
+
+  .problem-slide h2,
+  .problem-slide p {
+    max-width: 100%;
   }
 
   .changing-slide {
@@ -2420,6 +2451,23 @@ blockquote {
 }
 
 @media (max-width: 480px) {
+  .hero-headline {
+    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+    padding: 0 var(--space-xs);
+  }
+
+  .hero-text-row {
+    padding: 0 var(--space-md);
+  }
+
+  .hero .hero-container {
+    padding: 0 var(--space-sm);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
