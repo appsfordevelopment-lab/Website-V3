@@ -256,9 +256,10 @@ p {
 }
 
 .nav-cta-arrow {
-  font-size: 1em;
-  line-height: 1;
-  font-weight: 900;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  stroke-width: 2.5;
 }
 
 /* Order now in mobile menu - hidden on desktop */
@@ -2358,6 +2359,11 @@ blockquote {
     font-size: 0.85rem;
     flex-shrink: 0;
     border-radius: var(--radius-sm);
+  }
+
+  .nav-cta .nav-cta-arrow {
+    width: 14px;
+    height: 14px;
   }
 
   /* Order now in mobile menu */
