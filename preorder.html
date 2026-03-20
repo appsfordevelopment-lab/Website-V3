@@ -23,7 +23,7 @@
         <li><a href="quiz.html">Is Tyme Boxed for me?</a></li>
       </ul>
       <a href="preorder.html" class="nav-cta">
-        Pre-order now
+        Order now
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
           stroke-linejoin="round">
           <line x1="7" y1="17" x2="17" y2="7" />
@@ -65,7 +65,7 @@
 
         <!-- Right: Product Info & Pre-order Form -->
         <div class="preorder-info">
-          <h1 class="preorder-title">Tyme Boxed + App</h1>
+          <h1 class="preorder-title">Tyme Boxed Device + App</h1>
           <p class="preorder-desc">Tyme Boxed uses physical friction to create a real barrier between you and infinite scroll. Tap to block, tap to unblock-so your brain gets the pause it needs to choose consciously. No subscriptions. No side effects.</p>
           <!-- Active Batch -->
           <div class="preorder-batch-block preorder-batch-active">
@@ -172,6 +172,11 @@
         moneyFormat: 'Rs.%20%7B%7Bamount%7D%7D',
         options: {
   "product": {
+    "contents": {
+      "img": false,
+      "title": false,
+      "price": false
+    },
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
@@ -195,7 +200,7 @@
         "padding-right": "1.5rem"
       }
     },
-    "buttonDestination": "checkout",
+    "buttonDestination": "cart",
     "text": {
       "button": "Buy now"
     }
@@ -244,6 +249,7 @@
   },
   "option": {},
   "cart": {
+    "popup": true,
     "styles": {
       "button": {
         "font-weight": "bold",
@@ -261,6 +267,10 @@
       "total": "Subtotal",
       "button": "Checkout"
     }
+  },
+  "window": {
+    "height": 700,
+    "width": 600
   },
   "toggle": {
     "styles": {

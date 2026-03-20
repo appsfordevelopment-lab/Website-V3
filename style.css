@@ -2152,6 +2152,14 @@ blockquote {
   color: #fff;
 }
 
+/* Order now button */
+.quiz-order-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}
+
 /* Re-take button */
 .quiz-retake {
   display: block;
