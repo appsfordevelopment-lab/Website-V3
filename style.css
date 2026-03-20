@@ -236,7 +236,7 @@ p {
   background: var(--accent-gold-light);
   color: var(--text-primary) !important;
   opacity: 1 !important;
-  padding: 0.45rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 500;
@@ -253,6 +253,24 @@ p {
 .nav-cta svg {
   width: 12px;
   height: 12px;
+}
+
+.nav-cta-arrow {
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 900;
+}
+
+/* Order now in mobile menu - hidden on desktop */
+.nav-cta-mobile {
+  display: none;
+}
+
+/* Nav right: Order now + Hamburger (grouped on mobile) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Hamburger */
@@ -2329,8 +2347,31 @@ blockquote {
     opacity: 0.7;
   }
 
+  .nav-right {
+    gap: 0.35rem;
+  }
+
   .nav-cta {
-    display: none;
+    display: inline-flex !important;
+    visibility: visible !important;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Order now in mobile menu */
+  .nav-cta-mobile {
+    display: block;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-light);
+  }
+
+  .nav-cta-in-menu {
+    display: inline-flex !important;
+    justify-content: center;
+    width: 100%;
   }
 
   .nav-hamburger {
