@@ -374,11 +374,13 @@ p {
   padding: 0 var(--space-lg);
 }
 
-.hero-headline {
-  max-width: 700px;
+.hero-headline,
+h2.hero-headline {
+  max-width: 600px;
   margin: 0 auto;
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 48px;
 }
 
 .hero-description {
@@ -1594,6 +1596,7 @@ blockquote {
 
 .science-video-card {
   display: block;
+  width: 100%;
   color: inherit;
   transition: transform var(--duration-fast) var(--ease-smooth);
 }
@@ -1604,10 +1607,12 @@ blockquote {
 
 .science-video-thumbnail {
   position: relative;
+  width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 16 / 9;
   background: var(--bg-dark);
+  min-height: 120px;
 }
 
 .science-video-thumbnail img {
@@ -2340,6 +2345,10 @@ blockquote {
 
   h2 {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .hero-headline {
+    font-size: 48px;
   }
 
   .problem-slide {
