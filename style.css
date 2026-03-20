@@ -78,7 +78,6 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 body {
@@ -89,6 +88,8 @@ body {
   color: var(--text-primary);
   background: var(--bg-primary);
   overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 img {
@@ -381,7 +382,7 @@ h2.hero-headline {
   margin: 0 auto;
   font-family: var(--font-heading);
   font-weight: 300;
-  font-size: 48px;
+  
 }
 
 .hero-description {
@@ -2357,11 +2358,16 @@ blockquote {
   }
 
   .hero-headline {
-    font-size: clamp(1.35rem, 5vw, 2rem);
-    line-height: 1.3;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    line-height: 1.4;
     padding: 0 var(--space-sm);
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: calc(var(--space-lg) + 60px) 0 var(--space-lg);
   }
 
   .hero-text-row {
@@ -2407,8 +2413,79 @@ blockquote {
     font-size: 0.85rem;
   }
 
-  .hero-float-card {
-    display: none;
+  /* Introducing Tyme Boxed - mobile */
+  .intro-section {
+    padding: var(--space-lg) 0;
+  }
+
+  .intro-card {
+    gap: var(--space-lg);
+    padding: 0;
+  }
+
+  .intro-section .container {
+    padding: 0 var(--space-md);
+  }
+
+  .intro-image-wrapper {
+    order: 1;
+    width: 100%;
+  }
+
+  .intro-image {
+    width: 100%;
+    min-height: 200px;
+    max-height: none;
+    aspect-ratio: 4 / 3;
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Float card - same style as laptop, smaller size */
+  .intro-image-wrapper .hero-float-card {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: auto;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    gap: var(--space-xs);
+  }
+
+  .intro-image-wrapper .hero-float-card .icon {
+    font-size: 1rem;
+  }
+
+  .intro-image-wrapper .hero-float-card p {
+    font-size: 0.7rem;
+  }
+
+  .intro-image-wrapper .hero-float-card strong {
+    font-size: 0.85rem;
+  }
+
+  .intro-content {
+    order: 2;
+    padding: 0;
+    text-align: left;
+  }
+
+  .intro-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .intro-description {
+    text-align: center;
+  }
+
+  .intro-actions {
+    justify-content: center;
   }
 
   .quiz-result-split {
@@ -2452,8 +2529,13 @@ blockquote {
 
 @media (max-width: 480px) {
   .hero-headline {
-    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    line-height: 1.45;
     padding: 0 var(--space-xs);
+  }
+
+  .hero {
+    padding: calc(var(--space-md) + 56px) 0 var(--space-md);
   }
 
   .hero-text-row {
@@ -2480,6 +2562,15 @@ blockquote {
 
   .product-specs {
     grid-template-columns: 1fr;
+  }
+
+  /* Introducing Tyme Boxed - small phones */
+  .intro-image {
+    min-height: 180px;
+  }
+
+  .intro-heading {
+    font-size: 1.25rem;
   }
 }
 
